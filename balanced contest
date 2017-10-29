@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    long int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int n,i,k;
+        cin>>n>>k;
+        long long int num,easy=0,hard=0;
+        for(i=0;i<n;i++)
+        {
+            cin>>num;
+            if(num>=(k/2))
+             easy++;
+            if(num<=(k/10))
+                hard++;
+        }
+        if(k==1 && n==3 && hard>=2)
+          {
+             cout<<"yes\n";
+        continue;
+          }
+        if(easy==1 && hard==2)
+            cout<<"yes\n";
+        else
+            cout<<"no\n";
+    }
+}
